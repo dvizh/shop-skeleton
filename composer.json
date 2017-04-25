@@ -1,0 +1,54 @@
+{
+    "name": "dvizh/shop-skeleton",
+    "description": "Skeleton for e-comerce MVP develop",
+    "keywords": ["yii2", "yii", "skeleton", "framework", "advanced", "project template", "shop", "dvizh"],
+    "homepage": "https://github.com/dvizh",
+    "type": "project",
+    "license": "apache",
+    "authors": [
+      {
+        "name": "Ilya Pistol",
+        "email": "admin@nethammer.ru"
+      }
+    ],
+    "support": {
+        "issues": "https://github.com/dvizh/"
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "~2.0.6",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-swiftmailer": "~2.0.0",
+        "yiisoft/yii2-authclient": "~2.1.0",
+        "dvizh/yii2-shop": "*",
+        "dvizh/yii2-order": "*",
+        "dvizh/yii2-cart": "*",
+        "dvizh/yii2-promocode": "*",
+        "dvizh/yii2-review": "*",
+        "dvizh/yii2-certificate": "*",
+        "dmstr/yii2-adminlte-asset": "2.*"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    },
+    "autoload": {
+    	"psr-4": {
+    	    "dektrium\\user\\": "common/modules/dektrium/yii2-user",
+    	    "dektrium\\rbac\\": "common/modules/dektrium/yii2-rbac"
+    	}
+    }
+}
