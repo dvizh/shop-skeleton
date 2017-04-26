@@ -1,5 +1,5 @@
 <?php
-use dektrium\user\migrations\Migration;
+namespace dektrium\rbac\migrations;
 
 class m210418_174712_insert_user_role extends Migration
 {

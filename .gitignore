@@ -36,3 +36,7 @@ phpunit.phar
 /frontend/web/images/cache/*
 /frontend/web/images/source/*
 /frontend/web/images/store/*
+/frontend/runtime/*
+/backend/runtime/*
+/console/runtime/*
+/common/runtime/*
