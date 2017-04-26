@@ -30,17 +30,17 @@ DSS (Dvizh Shop Skeleton)
 ===============================
 Используемые в скелетоне важные модули:
 
-* [dvizh/yii2-shop](https://github.com/dvizh/yii2-shop) - CRUD для управления товарами, модификациями, ценами, категориями, производителями, значениями фильтров
-* [dvizh/yii2-filter](https://github.com/dvizh/yii2-filter) - CRUD для фильтров на сайте, набор виджетов для быстрого применения фильтов на фронте с помощью Ajax
-* [dvizh/yii2-field](https://github.com/dvizh/yii2-field) - CRUD управления кастомными полями любой AR сущности
-* [dvizh/yii2-gallery](https://github.com/dvizh/yii2-gallery) - виджет загрузки картинок, виджет вывода картинок в виде галереи
-* [dvizh/yii2-seo](https://github.com/dvizh/yii2-seo) - виджет позволяет прикреплять к моделям важные для SEO поля
-* [dvizh/yii2-order](https://github.com/dvizh/yii2-order) - CRUD заказов, набор виджетов для создания заказа и с аналитическими отчетами о заказах за период
-* [dvizh/yii2-cart](https://github.com/dvizh/yii2-cart) - сервис и набор виджетов для быстрой разработки функционала корзины на сайте. В корзину можно положить любую модель, имплементируюущую нужный интерфейс.
-* [dvizh/yii2-promocode](https://github.com/dvizh/yii2-promocode) - CRUD для управления скидками на сайте, сервис работы со скидками
-* [dvizh/yii2-certificate](https://github.com/dvizh/yii2-certificate) - CRUD для управления подарочными сертификатами на сайте, сервис работы со скидками
-* [dektrium/yii2-user](https://github.com/dektrium/yii2-user) - CRUD управления пользователями сайта
-* [dektrium/yii2-rbac](https://github.com/dektrium/yii2-rbac) - RBAC для сайта
+* [dvizh/yii2-shop](https://github.com/dvizh/yii2-shop) - CRUD для управления товарами, модификациями, ценами, категориями, производителями, значениями фильтров;
+* [dvizh/yii2-filter](https://github.com/dvizh/yii2-filter) - CRUD для фильтров на сайте, набор виджетов для быстрого применения фильтов на фронте с помощью Ajax;
+* [dvizh/yii2-field](https://github.com/dvizh/yii2-field) - CRUD управления кастомными полями любой AR сущности;
+* [dvizh/yii2-gallery](https://github.com/dvizh/yii2-gallery) - виджет загрузки картинок, виджет вывода картинок в виде галереи;
+* [dvizh/yii2-seo](https://github.com/dvizh/yii2-seo) - виджет позволяет прикреплять к моделям важные для SEO поля;
+* [dvizh/yii2-order](https://github.com/dvizh/yii2-order) - CRUD заказов, набор виджетов для создания заказа и с аналитическими отчетами о заказах за период;
+* [dvizh/yii2-cart](https://github.com/dvizh/yii2-cart) - сервис и набор виджетов для быстрой разработки функционала корзины на сайте. В корзину можно положить любую модель, имплементируюущую нужный интерфейс;
+* [dvizh/yii2-promocode](https://github.com/dvizh/yii2-promocode) - CRUD для управления скидками на сайте, сервис работы со скидками;
+* [dvizh/yii2-certificate](https://github.com/dvizh/yii2-certificate) - CRUD для управления подарочными сертификатами на сайте, сервис работы со скидками;
+* [dektrium/yii2-user](https://github.com/dektrium/yii2-user) - CRUD управления пользователями сайта;
+* [dektrium/yii2-rbac](https://github.com/dektrium/yii2-rbac) - RBAC для сайта.
 
 
 Установка
