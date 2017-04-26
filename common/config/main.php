@@ -23,6 +23,14 @@ return [
         ]
     ),
     'components' => [
+        /*
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+            ],
+        ],
+        */
         'assetManager' => [
             'forceCopy' => false,
         ],

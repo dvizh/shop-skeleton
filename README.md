@@ -47,7 +47,7 @@ DSS (Dvizh Shop Skeleton)
 ===============================
 
 Существует два способа установки модулей:
-1) Через клонирование репозитория Git'ом в кастомную папку Yii2 проекта и подключение модуля в секции autoload composer.json файла. Не забудьте подключить модуль в секции bootstrap, extensions и modules (по аналогии с модулем от dektrium в данном скелетоне)
+1) Через клонирование репозитория Git'ом в кастомную папку Yii2 проекта и подключение модуля в секции autoload composer.json файла (+выполните composer update). Не забудьте подключить модуль в секции bootstrap, extensions и modules конфига (по аналогии с модулем от dektrium в данном скелетоне)
 2) Через Composer:
 
 ```
@@ -71,7 +71,6 @@ composer update
 */commom/config/main-local.php
 */console/config/main-local.php
 
-
 Выполнение миграций модулей:
 
 ```
@@ -88,6 +87,9 @@ php yii migrate/up --migrationPath=vendor/dvizh/yii2-gallery/src/migrations
 php yii migrate/up --migrationPath=vendor/dvizh/yii2-promocode/src/migrations
 php yii migrate/up --migrationPath=vendor/dvizh/yii2-certificate/src/migrations
 ```
+
+Если у вас стоит Apache, на этом всё, .htaccess файлы идут в составе скелетона, все запросы пользователя будут направления на /frontend/web.
+Если Apache нет, то придется еще настроить точки входа для фронтенда (frontend/web) и бекенда (backend/web).
 
 Панель администрирования по умолчанию:
 

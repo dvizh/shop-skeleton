@@ -15,9 +15,6 @@ return [
         'user' => [
             'as frontend' => 'dektrium\user\filters\FrontendFilter',
         ],
-        'rbac' => [
-            'class' => 'dektrium\rbac\RbacConsoleModule',
-        ],
     ],
     'components' => [
         'request' => [
@@ -50,13 +47,6 @@ return [
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
-        ],
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-                '/site/login' => '/user/security/login',
-            ],
         ],
     ],
     'params' => $params,
