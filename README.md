@@ -54,6 +54,8 @@ DSS (Dvizh Shop Skeleton)
 composer create-project --prefer-dist --stability=dev dvizh/shop-skeleton
 ```
 
+Выполните git init. Вы создали свою собственную ветку DSS, осталось собрать с помощью виджетов фронт нужного заказчику сайта.
+
 Выполните следующую команду в корне проекта:
 
 ```
