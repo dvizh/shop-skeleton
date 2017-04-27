@@ -1,7 +1,5 @@
 <?php
-use dektrium\user\migrations\Migration;
-
-class m170418_170456_register_user extends Migration
+class m170418_170456_register_user extends \yii\db\Migration
 {
     public function up()
     {

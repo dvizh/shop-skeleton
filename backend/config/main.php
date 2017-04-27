@@ -38,21 +38,21 @@ return [
             ],
         ],
         'request' => [
-            'baseUrl' => '/admin',
+            'baseUrl' => '/backend/web',
             'csrfParam' => '_csrf-backend',
         ],
         'session' => [
-            'name' => 'BACKENDSESSID',
+            'name' => 'backend-sess',
             'cookieParams' => [
                 'httpOnly' => true,
-                'path'     => '/admin',
+                'path'     => '/backend/web',
             ],
         ],
         'user' => [
             'identityClass' => 'dektrium\user\models\User',
             'identityCookie' => [
                 'name'     => '_backendIdentity',
-                'path'     => '/admin',
+                'path'     => '/backend/web',
                 'httpOnly' => true,
             ],
             'loginUrl' => ['/user/security/login'],

@@ -118,3 +118,13 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+.dvizh-filter .block {
+    width: 300px;
+    float: left;
+    padding: 20px;
+}
+
+.product-block {
+    padding-bottom: 50px;
+}

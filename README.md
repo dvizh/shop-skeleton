@@ -74,9 +74,9 @@ composer update
 Выполнение миграций модулей:
 
 ```
-php yii migrate/up --migrationPath=migrations
 php yii migrate/up --migrationPath=@yii/rbac/migrations
 php yii migrate/up --migrationPath=common/modules/dektrium/yii2-user/migrations
+php yii migrate/up --migrationPath=migrations
 php yii migrate/up --migrationPath=vendor/dvizh/yii2-shop/src/migrations
 php yii migrate/up --migrationPath=vendor/dvizh/yii2-order/src/migrations
 php yii migrate/up --migrationPath=vendor/dvizh/yii2-cart/src/migrations

@@ -1,7 +1,5 @@
 <?php
-namespace dektrium\rbac\migrations;
-
-class m210418_174712_insert_user_role extends Migration
+class m170426_174712_insert_user_role extends \yii\db\Migration
 {
     public function up()
     {
