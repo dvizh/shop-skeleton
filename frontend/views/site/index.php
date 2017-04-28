@@ -6,6 +6,7 @@ use dvizh\filter\widgets\FilterPanel;
 use dvizh\field\widgets\Show;
 use dvizh\cart\widgets\ElementsList;
 use dvizh\cart\widgets\CartInformer;
+use dvizh\cart\widgets\ChangeOptions;
 use dvizh\cart\widgets\BuyButton;
 use dvizh\order\widgets\OrderForm;
 use dvizh\promocode\widgets\Enter;
@@ -70,7 +71,14 @@ $this->title = 'Модули Dvizh';
                                 <?=ShowPrice::widget(['model' => $product]);?> р.
                             </div>
                         </fieldset>
-
+                        
+                        <fieldset>
+                            <legend>dvizh\cart\widgets\ChangeOptions</legend>
+                            <div>
+                                <?=ChangeOptions::widget(['model' => $product]);?>
+                            </div>
+                        </fieldset>
+                        
                         <fieldset>
                             <legend>dvizh\cart\widgets\BuyButton</legend>
                             <div>
