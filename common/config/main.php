@@ -94,9 +94,9 @@ return [
         ],
         'order' => [
             'class' => 'dvizh\order\Module',
-            'layoutPath' => 'frontend\views\layouts',
-            'successUrl' => '/page/thanks', //Страница, куда попадает пользователь после успешного заказа
+            'successUrl' => '/site/thanks', //Страница, куда попадает пользователь после успешного заказа
             //'ordersEmail' => 'test@yandex.ru', //Мыло для отправки заказов
+            'as order_filling' => '\common\aspects\OrderFilling',
         ],
         'cart' => [
             'class' => 'dvizh\cart\Module',

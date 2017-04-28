@@ -4,6 +4,10 @@ use dvizh\shop\models\Product;
 use dvizh\shop\models\Category;
 use dvizh\shop\widgets\ShowPrice;
 use dvizh\filter\widgets\FilterPanel;
+use dvizh\field\widgets\Show;
+use dvizh\cart\widgets\ElementsList;
+use dvizh\cart\widgets\BuyButton;
+use dvizh\order\widgets\OrderForm;
 
 /* @var $this yii\web\View */
 
@@ -29,19 +33,21 @@ $products = $query->limit(12)->all();
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Во дела!</h1>
+        <h1>Во дела</h1>
 
-        <p class="lead">Ниже представлено большинство виджетов. Они работают сообща, хоть и являются частью разных модулей.</p>
+        <p class="lead">Ниже представлены некоторые важные виджеты. Они работают сообща, хоть и являются частью разных модулей.</p>
     </div>
-
-    <ul class="nav nav-pills">
-        <?php foreach($categories as $cat) { ?>
-            <li <?php if($cat->id == $category->id) echo 'class="active"';?>><a href="<?=Url::toRoute(['/site/index', 'categoryId' => $cat->id]);?>"><?=$cat->name;?></a></li>
-        <?php } ?>
-    </ul>
 
     <div class="body-content">
 
+        <h2>1. Выберите категорию</h2>
+        <ul class="nav nav-pills">
+            <?php foreach($categories as $cat) { ?>
+                <li <?php if($cat->id == $category->id) echo 'class="active"';?>><a href="<?=Url::toRoute(['/site/index', 'categoryId' => $cat->id]);?>"><?=$cat->name;?></a></li>
+            <?php } ?>
+        </ul>
+
+        <h2>2. Отфильтруйте товар</h2>
         <div class="row">
             <div class="col-md-12">
                 <fieldset>
@@ -53,7 +59,7 @@ $products = $query->limit(12)->all();
             </div>
         </div>
 
-        <h2>Товары</h2>
+        <h2>3. Положите в корзину товар</h2>
         <div class="row" id="productsList">
             <?php foreach($products as $product) { ?>
                 <div class="col-md-6 product-block">
@@ -63,14 +69,46 @@ $products = $query->limit(12)->all();
                     <h3><?=$product->name;?></h3>
 
                     <fieldset>
+                        <legend>dvizh\field\widgets\Show</legend>
+                        <div>
+                            <?=Show::widget(['model' => $product]);?>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
                         <legend>dvizh\shop\widgets\ShowPrice</legend>
                         <div>
                             <?=ShowPrice::widget(['model' => $product]);?> р.
                         </div>
                     </fieldset>
+
+                    <fieldset>
+                        <legend>dvizh\cart\widgets\BuyButton</legend>
+                        <div>
+                            <?=BuyButton::widget(['model' => $product]);?>
+                        </div>
+                    </fieldset>
+
                 </div>
             <?php } ?>
         </div>
+
+        <h2>4. Проверьте корзину</h2>
+        <fieldset>
+            <legend>dvizh\cart\widgets\ElementsList</legend>
+            <div>
+                <?=ElementsList::widget();?>
+            </div>
+        </fieldset>
+
+        <h2>4. Совершите заказ</h2>
+        <fieldset>
+            <legend>dvizh\order\widgets\OrderForm</legend>
+            <div>
+                <?=OrderForm::widget();?>
+            </div>
+        </fieldset>
+
 
     </div>
 </div>

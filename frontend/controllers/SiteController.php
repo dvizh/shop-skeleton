@@ -45,6 +45,11 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    public function actionThanks()
+    {
+        return $this->render('thanks');
+    }
+
     /**
      * Displays contact page.
      *
