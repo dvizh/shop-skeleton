@@ -75,6 +75,8 @@ return [
             'currency' => 'р.', //Валюта
             'currencyPosition' => 'after', //after или before (позиция значка валюты относительно цены)
             'priceFormat' => [2,'.', ''], //Форма цены
+            'as set_discount' => ['class' => 'common\aspects\SetDiscount'],
+            'as set_certificate_discount' => '\common\aspects\SetCertificateDiscount'
         ],
         'client' => [
             'class' => 'dvizh\client\Client',
@@ -95,7 +97,8 @@ return [
         'order' => [
             'class' => 'dvizh\order\Module',
             'successUrl' => '/site/thanks', //Страница, куда попадает пользователь после успешного заказа
-            //'ordersEmail' => 'test@yandex.ru', //Мыло для отправки заказов
+            //'adminNotificationEmail' => 'test@yandex.ru', //Мыло для отправки заказов
+            'as use_certificate' => '\common\aspects\UseCertificate',
             'as order_filling' => '\common\aspects\OrderFilling',
         ],
         'cart' => [

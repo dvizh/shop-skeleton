@@ -1,13 +1,15 @@
 <?php
 use yii\helpers\Url;
-use dvizh\shop\models\Product;
 use dvizh\shop\models\Category;
 use dvizh\shop\widgets\ShowPrice;
 use dvizh\filter\widgets\FilterPanel;
 use dvizh\field\widgets\Show;
 use dvizh\cart\widgets\ElementsList;
+use dvizh\cart\widgets\CartInformer;
 use dvizh\cart\widgets\BuyButton;
 use dvizh\order\widgets\OrderForm;
+use dvizh\promocode\widgets\Enter;
+use dvizh\certificate\widgets\CertificateWidget;
 
 /* @var $this yii\web\View */
 
@@ -15,20 +17,6 @@ $this->title = 'Модули Dvizh';
 
 $categories = Category::find()->all();
 
-if($catId = yii::$app->request->get('categoryId')) {
-    $category = Category::findOne($catId);
-} else {
-    $category = current($categories);
-}
-
-$query = Product::find()->category($category->id)->orderBy('id DESC');
-$queryForFilter = clone $query;
-
-if($filter = yii::$app->request->get('filter')) {
-    $query->filtered($filter);
-}
-
-$products = $query->limit(12)->all();
 ?>
 <div class="site-index">
 
@@ -101,7 +89,36 @@ $products = $query->limit(12)->all();
             </div>
         </fieldset>
 
-        <h2>4. Совершите заказ</h2>
+        <fieldset>
+            <legend>dvizh\cart\widgets\CartInformer</legend>
+            <div>
+                <?=CartInformer::widget();?>
+            </div>
+        </fieldset>
+
+        <h2>5. Воспользуйтесь маркетингом</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <fieldset>
+                    <legend>dvizh\promocode\widgets\Enter</legend>
+                    <div>
+                        <?=Enter::widget();?>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="col-md-6">
+                <fieldset>
+                    <legend>dvizh\certificate\widgets\CertificateWidget</legend>
+                    <div>
+                        <?=CertificateWidget::widget();?>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+
+        <h2>6. Совершите заказ</h2>
         <fieldset>
             <legend>dvizh\order\widgets\OrderForm</legend>
             <div>

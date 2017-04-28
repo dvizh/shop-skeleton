@@ -2,15 +2,9 @@
 namespace frontend\controllers;
 
 use Yii;
-use yii\base\InvalidParamException;
-use yii\web\BadRequestHttpException;
 use yii\web\Controller;
-use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
-use common\models\LoginForm;
-use frontend\models\PasswordResetRequestForm;
-use frontend\models\ResetPasswordForm;
-use frontend\models\SignupForm;
+use dvizh\shop\models\Category;
+use dvizh\shop\models\Product;
 use frontend\models\ContactForm;
 
 /**
@@ -42,7 +36,26 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        if($catId = yii::$app->request->get('categoryId')) {
+            $category = Category::findOne($catId);
+        } else {
+            $category = Category::findOne(1);
+        }
+
+        $query = Product::find()->category($category->id)->orderBy('id DESC');
+        $queryForFilter = clone $query;
+
+        if($filter = yii::$app->request->get('filter')) {
+            $query->filtered($filter);
+        }
+
+        $products = $query->limit(12)->all();
+
+        return $this->render('index', [
+            'queryForFilter' => $queryForFilter,
+            'products' => $products,
+            'category' => $category,
+        ]);
     }
 
     public function actionThanks()
