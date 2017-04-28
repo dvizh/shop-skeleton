@@ -36,13 +36,22 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $categories = Category::find()->all();
+
         if($catId = yii::$app->request->get('categoryId')) {
             $category = Category::findOne($catId);
+        } elseif($categories) {
+            $category = current($categories);
         } else {
-            $category = Category::findOne(1);
+            $category = null;
         }
 
-        $query = Product::find()->category($category->id)->orderBy('id DESC');
+        if($category) {
+            $query = Product::find()->category($category->id)->orderBy('id DESC');
+        } else {
+            $query = Product::find()->orderBy('id DESC');
+        }
+
         $queryForFilter = clone $query;
 
         if($filter = yii::$app->request->get('filter')) {
@@ -53,6 +62,7 @@ class SiteController extends Controller
 
         return $this->render('index', [
             'queryForFilter' => $queryForFilter,
+            'categories' => $categories,
             'products' => $products,
             'category' => $category,
         ]);
