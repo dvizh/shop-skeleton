@@ -8,6 +8,7 @@ use dvizh\cart\widgets\ElementsList;
 use dvizh\cart\widgets\CartInformer;
 use dvizh\cart\widgets\ChangeOptions;
 use dvizh\cart\widgets\ChangeCount;
+use dvizh\cart\widgets\TruncateButton;
 use dvizh\cart\widgets\BuyButton;
 use dvizh\order\widgets\OrderForm;
 use dvizh\promocode\widgets\Enter;
@@ -110,6 +111,13 @@ $this->title = 'Модули Dvizh';
                 <legend>dvizh\cart\widgets\CartInformer</legend>
                 <div>
                     <?=CartInformer::widget();?>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>dvizh\cart\widgets\TruncateButton</legend>
+                <div>
+                    <?=TruncateButton::widget();?>
                 </div>
             </fieldset>
 
