@@ -1,5 +1,4 @@
 <?php
-\Yii::$container->set('dvizh\order\interfaces\Cart', 'dvizh\order\drivers\dvizhCart');
 
 return [
     'name' => 'Название магазина',
