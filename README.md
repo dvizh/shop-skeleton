@@ -82,18 +82,7 @@ composer update
 Выполнение миграций модулей:
 
 ```
-php yii migrate/up --migrationPath=@yii/rbac/migrations
-php yii migrate/up --migrationPath=common/modules/dektrium/yii2-user/migrations
-php yii migrate/up --migrationPath=migrations
-php yii migrate/up --migrationPath=vendor/dvizh/yii2-shop/src/migrations
-php yii migrate/up --migrationPath=vendor/dvizh/yii2-order/src/migrations
-php yii migrate/up --migrationPath=vendor/dvizh/yii2-cart/src/migrations
-php yii migrate/up --migrationPath=vendor/dvizh/yii2-filter/src/migrations
-php yii migrate/up --migrationPath=vendor/dvizh/yii2-field/src/migrations
-php yii migrate/up --migrationPath=vendor/dvizh/yii2-seo/src/migrations
-php yii migrate/up --migrationPath=vendor/dvizh/yii2-gallery/src/migrations
-php yii migrate/up --migrationPath=vendor/dvizh/yii2-promocode/src/migrations
-php yii migrate/up --migrationPath=vendor/dvizh/yii2-certificate/src/migrations
+sh migrate.sh
 ```
 
 Если у вас стоит Apache, на этом всё, .htaccess файлы идут в составе скелетона, все запросы пользователя будут направления на /frontend/web.
