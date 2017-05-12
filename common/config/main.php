@@ -166,5 +166,9 @@ return [
         'review' => [
             'class' => 'dvizh\review\Module',
         ],
+        'settings' => [
+            'class' => 'pheme\settings\Module',
+            'sourceLanguage' => 'ru'
+        ],
     ],
 ];

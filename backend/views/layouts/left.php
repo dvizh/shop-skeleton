@@ -63,7 +63,7 @@
                             ['label' => 'Типы цен', 'url' => ['/shop/price-type']],
                             ['label' => 'Типы доставки', 'url' => ['/order/shipping-type/index']],
                             ['label' => 'Типы оплаты', 'url' => ['/order/payment-type/index']],
-                            ['label' => 'Настройки сайта', 'url' => ['/settings/setting/index']],
+                            ['label' => 'Настройки сайта', 'url' => ['/settings/default/index']],
                         ]
                     ],
 

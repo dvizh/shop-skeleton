@@ -27,7 +27,8 @@
         "dvizh/yii2-promocode": "*",
         "dvizh/yii2-review": "*",
         "dvizh/yii2-certificate": "*",
-        "dmstr/yii2-adminlte-asset": "2.*"
+        "dmstr/yii2-adminlte-asset": "2.*",
+        "pheme/yii2-settings": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

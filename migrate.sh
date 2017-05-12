@@ -10,3 +10,4 @@ php yii migrate/up --migrationPath=vendor/dvizh/yii2-seo/src/migrations --intera
 php yii migrate/up --migrationPath=vendor/dvizh/yii2-gallery/src/migrations --interactive=0
 php yii migrate/up --migrationPath=vendor/dvizh/yii2-promocode/src/migrations --interactive=0
 php yii migrate/up --migrationPath=vendor/dvizh/yii2-certificate/src/migrations --interactive=0
+php yii migrate/up --migrationPath=@vendor/pheme/yii2-settings/migrations
