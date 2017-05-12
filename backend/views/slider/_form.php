@@ -13,11 +13,15 @@ use vova07\imperavi\Widget;
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
-    <div class="col-md-6">
+    <div class="col-md-6 col-lg-4">
+        <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
         <?= $form->field($model, 'url')->textInput(['maxlength' => true]) ?>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-6 col-lg-4">
         <?= $form->field($model, 'sort')->textInput(['type'=>'number']) ?>
     </div>
 
