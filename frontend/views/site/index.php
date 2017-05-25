@@ -28,7 +28,7 @@ $this->title = 'Модули Dvizh';
     </div>
 
     <?php if(!$categories) { ?>
-        <p>Заполните категории и товары в <a href="<?=Url::toRoute(['/backend/web/']);?>">админке</a>.</p>
+        <p>Заполните категории и товары в <a href="<?=Url::to('@web/backend/web/');?>">админке</a>.</p>
     <?php } else { ?>
         <div class="body-content">
 
