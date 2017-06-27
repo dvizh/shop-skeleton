@@ -45,12 +45,6 @@ use yii\helpers\Url;
 
     <div class="row">
         <div class="col-xs-12 col-md-6">
-            <?= $form->field($model, 'top_menu')->radioList(['1' => 'Да', '0' => 'Нет']) ?>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-md-6">
             <?= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
         </div>
     </div>
