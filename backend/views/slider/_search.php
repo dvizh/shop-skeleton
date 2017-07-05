@@ -19,7 +19,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'url') ?>
 
-    <?= $form->field($model, 'short_test') ?>
+    <?= $form->field($model, 'short_text') ?>
 
     <?= $form->field($model, 'sort') ?>
 
