@@ -21,7 +21,7 @@ class m170317_090025_slider extends Migration
             [
                 'id'=> $this->primaryKey(11),
                 'url'=> $this->string(255)->null()->defaultValue(null),
-                'short_test'=> $this->string(255)->null()->defaultValue(null),
+                'short_text'=> $this->string(255)->null()->defaultValue(null),
                 'sort'=> $this->integer(11)->null()->defaultValue(null),
             ],$tableOptions
         );
