@@ -54,18 +54,6 @@ class SliderController extends Controller
     }
 
     /**
-     * Displays a single Slider model.
-     * @param integer $id
-     * @return mixed
-     */
-    public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
-    }
-
-    /**
      * Creates a new Slider model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
@@ -104,7 +92,7 @@ class SliderController extends Controller
                 $model->url="#";
 
             if($model->save())
-                return $this->redirect(['view', 'id' => $model->id]);
+                return $this->redirect(['index']);
         }
 
         return $this->render('update', ['model' => $model,]);
