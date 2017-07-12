@@ -107,7 +107,7 @@ return [
             'class' => 'dvizh\promocode\Module',
             'informer' => 'dvizh\cart\widgets\CartInformer', // namespace to custom cartInformer widget
             'informerSettings' => [], //settings for custom cartInformer widget
-            'clientsModel' => 'dvizh\yii2-clients\models\Client',
+            //'clientsModel' => 'dvizh\yii2-clients\models\Client',
             //Указываем модели, к которым будем привязывать промокод
             'targetModelList' => [
                 'Категории' => [
