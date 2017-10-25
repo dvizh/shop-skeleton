@@ -80,6 +80,11 @@ return [
         'client' => [
             'class' => 'dvizh\client\Client',
         ],
+        'treeSettings' => [
+            'class' => 'dvizh\tree\TreeSettings',
+            'model' => '\dvizh\shop\models\Category',
+            'showId' => true,
+        ],
     ],
     'modules' => [
         'user' => [
@@ -169,6 +174,10 @@ return [
         'settings' => [
             'class' => 'pheme\settings\Module',
             'sourceLanguage' => 'ru'
+        ],
+        'tree' => [
+            'class' => 'dvizh\tree\Module',
+            'adminRoles' => ['@'],
         ],
     ],
 ];
