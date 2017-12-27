@@ -7,8 +7,7 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use vova07\imperavi\actions\GetAction;
 
-use pistol88\order\models\tools\OrderSearch;
-use pistol88\order\models\Order;
+use dvizh\order\models\tools\OrderSearch;
 
 
 /**
@@ -51,7 +50,7 @@ class SiteController extends Controller
                 'class' => 'vova07\imperavi\actions\GetAction',
                 'url' => 'http://shop.local/images/', // Directory URL address, where files are stored.
                 'path' => '@frontend/web/images/vova07', // Or absolute path to directory where files are stored.
-                'type' => GetAction::TYPE_IMAGES,
+                'options' => ['only' => ['*.jpg', '*.jpeg', '*.png', '*.gif', '*.ico']], // These options are by default.
             ],
             'image-upload' => [
                 'class' => 'vova07\imperavi\actions\UploadAction',
