@@ -82,8 +82,9 @@ return [
         ],
         'treeSettings' => [
             'class' => 'dvizh\tree\TreeSettings',
-            'model' => '\dvizh\shop\models\Category',
-            'showId' => true,
+            'models' => [
+                'dvizh\shop\models\Category' => [],
+            ],
         ],
     ],
     'modules' => [
