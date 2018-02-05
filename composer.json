@@ -4,7 +4,7 @@
     "keywords": ["yii2", "yii", "skeleton", "framework", "advanced", "project template", "shop", "dvizh"],
     "homepage": "https://github.com/dvizh",
     "type": "project",
-    "license": "apache",
+    "license": "Apache-2.0",
     "authors": [
       {
         "name": "Ilya Pistol",
