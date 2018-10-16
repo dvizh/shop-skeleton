@@ -8,7 +8,10 @@ return [
         'dektrium\user\Bootstrap',
         'dektrium\rbac\Bootstrap',
     ],
-
+    'aliases' => [
+        '@bower' => '@vendor/bower-asset',
+        '@npm'   => '@vendor/npm-asset',
+    ],
     'extensions' => yii\helpers\ArrayHelper::merge(
         require( dirname(dirname(__DIR__)) . '/vendor/yiisoft/extensions.php'),
         [
