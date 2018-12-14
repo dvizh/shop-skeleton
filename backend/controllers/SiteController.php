@@ -48,13 +48,13 @@ class SiteController extends Controller
             ],
             'images-get' => [
                 'class' => 'vova07\imperavi\actions\GetAction',
-                'url' => 'http://shop.local/images/', // Directory URL address, where files are stored.
+                'url' => '/frontend/web/images/vova07', // Directory URL address, where files are stored.
                 'path' => '@frontend/web/images/vova07', // Or absolute path to directory where files are stored.
                 'options' => ['only' => ['*.jpg', '*.jpeg', '*.png', '*.gif', '*.ico']], // These options are by default.
             ],
             'image-upload' => [
                 'class' => 'vova07\imperavi\actions\UploadAction',
-                'url' => 'http://shop.local/images/', // Directory URL address, where files are stored.
+                'url' => '/frontend/web/images/vova07', // Directory URL address, where files are stored.
                 'path' => '@frontend/web/images/vova07', // Or absolute path to directory where files are stored.
             ],
         ];
